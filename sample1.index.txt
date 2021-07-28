@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Title>     
+Add the Background image using background attribute   
+</Title>  
+</Head>  
+<Body background="https://1.bp.blogspot.com/-sTxAHAxirGM/WVbAe2098nI/AAAAAAABENs/_I5sYMYgLOUzaIE7FfF4qdGX-hoAkq9SgCLcBGAs/s1600/Blog_20170624_113552.jpg">   
+<style>
+body {
+font-family: Arial, Helvetica, sans-serif;
+ background-color: yellowgreen;  
+}  
+button {   
+       background-color: green;   
+       width: 100%;  
+        color: white;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+   }  
+ button:hover {   
+        opacity: 0.7;   
+    }        
+ .container {   
+        padding: 25px;   
+        background-color: babyblue;  
+   }   
+.open-button {
+  background-color: Green;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+.form-popup {
+ background-color: yellowgreen;
+  color: white;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: black;
+}
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  background-color: red;
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+ <center> <h1> SIGN IN</h1> </center>   
+    <form>  
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" required>  
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required>  
+            <input type="checkbox" checked="checked"> Remember me 
+            <button type="login="login" value="Submit" formtarget="_blank">Login</button>            
+            Forgot <a href="#"> password? </a>  
+Don't have an account ? <button class="open-button" onclick="openForm()">Sign up</button>
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Registration Form</h1>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Full Name" name="email" required>
+    <input type="text" placeholder="E-mail Address" name="email" required>
+    <input type="text" placeholder="User Name" name="email" required>
+    <input type="text" placeholder="Phone Number" name="email" required>
+    <input type="text" placeholder="Present Address" name="email" required>
+    <input type="text" placeholder="Permanent Address" name="email" required>
+    <input type="text" placeholder="NID Number" name="email" required>
+ <button type="register" class="btn">Register</button>
+<button type="button" class="btn cancel" onclick="closeForm()">Login</button>
+  </form>
+</div>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
